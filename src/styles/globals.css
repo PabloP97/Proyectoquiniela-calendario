@@ -1,0 +1,488 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  --background: #ffffff;
+  --foreground: oklch(0.145 0 0);
+  --card: #ffffff;
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: #030213;
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.95 0.0058 264.53);
+  --secondary-foreground: #030213;
+  --muted: #ececf0;
+  --muted-foreground: #717182;
+  --accent: #e9ebef;
+  --accent-foreground: #030213;
+  --destructive: #d4183d;
+  --destructive-foreground: #ffffff;
+  --border: rgba(0, 0, 0, 0.1);
+  --input: transparent;
+  --input-background: #f3f3f5;
+  --switch-background: #cbced4;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: #030213;
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/**
+ * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h3 {
+      font-size: var(--text-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h4 {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    p {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+
+    label {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    button {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+/* Estilos personalizados para los modos de día */
+.day-panel-readonly {
+  position: relative;
+  opacity: 0.85;
+  background: linear-gradient(135deg, var(--muted) 0%, var(--background) 100%);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.day-panel-readonly::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--muted-foreground), var(--muted));
+  z-index: 1;
+}
+
+.day-panel-editable {
+  position: relative;
+  background: linear-gradient(135deg, var(--background) 0%, var(--primary)/5 100%);
+  border: 2px solid var(--primary)/20;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.day-panel-editable::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), var(--chart-1));
+  z-index: 1;
+}
+
+.readonly-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  background: var(--muted);
+  color: var(--muted-foreground);
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-medium);
+  border: 1px solid var(--border);
+}
+
+.current-day-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  background: var(--primary)/10;
+  color: var(--primary);
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-medium);
+  border: 1px solid var(--primary)/20;
+}
+
+.dark .day-panel-readonly {
+  background: linear-gradient(135deg, var(--muted) 0%, var(--background) 100%);
+  border: 1px solid var(--border);
+}
+
+.dark .day-panel-editable {
+  background: linear-gradient(135deg, var(--background) 0%, var(--primary)/10 100%);
+  border: 2px solid var(--primary)/30;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para pestañas en modo lectura */
+.day-panel-readonly .tabs-content {
+  opacity: 0.9;
+}
+
+.day-panel-readonly [data-state="inactive"] {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.day-panel-editable .tabs-trigger:hover {
+  background: var(--primary)/10;
+  transition: background 0.2s ease;
+}
+
+/* Efectos de brillo para el día actual */
+@keyframes gentle-pulse {
+  0%, 100% { 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); 
+  }
+  50% { 
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1), 0 0 0 1px var(--primary)/10; 
+  }
+}
+
+.day-panel-editable {
+  animation: gentle-pulse 3s ease-in-out infinite;
+}
+
+/* Estilos para pestañas intuitivas - Día Actual (Editable) */
+.day-panel-editable [data-state="active"][data-value] {
+  background: linear-gradient(135deg, var(--chart-1) 0%, var(--chart-2) 100%);
+  color: white;
+  border: 2px solid var(--chart-1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-weight: 600;
+  transform: translateY(-1px);
+  transition: all 0.2s ease;
+}
+
+.day-panel-editable [data-state="inactive"][data-value] {
+  background: linear-gradient(135deg, var(--primary)/15 0%, var(--chart-1)/10 100%);
+  color: var(--primary);
+  border: 1px solid var(--primary)/20;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.day-panel-editable [data-state="inactive"][data-value]:hover {
+  background: linear-gradient(135deg, var(--primary)/25 0%, var(--chart-1)/20 100%);
+  color: var(--primary);
+  border: 1px solid var(--primary)/30;
+  transform: translateY(-0.5px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para pestañas intuitivas - Días Pasados (Solo Lectura) */
+.day-panel-readonly [data-state="active"][data-value] {
+  background: linear-gradient(135deg, var(--muted) 0%, var(--muted-foreground)/20 100%);
+  color: var(--muted-foreground);
+  border: 1px solid var(--border);
+  font-weight: 500;
+}
+
+.day-panel-readonly [data-state="inactive"][data-value] {
+  background: var(--background);
+  color: var(--muted-foreground);
+  border: 1px solid var(--border);
+  opacity: 0.7;
+  font-weight: 400;
+}
+
+.day-panel-readonly [data-state="inactive"][data-value]:hover {
+  background: var(--muted)/50;
+  opacity: 0.8;
+}
+
+/* Efectos especiales para pestañas del día actual */
+.day-panel-editable [data-state="active"][data-value]::before {
+  content: '✨';
+  margin-right: 0.25rem;
+  animation: sparkle 2s ease-in-out infinite alternate;
+}
+
+@keyframes sparkle {
+  0% { opacity: 0.6; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1.1); }
+}
+
+/* Indicador visual para pestañas deshabilitadas */
+.day-panel-readonly [data-state="inactive"][data-value][data-disabled] {
+  opacity: 0.4;
+  cursor: not-allowed;
+  background: var(--muted)/30;
+}
+
+.day-panel-readonly [data-state="inactive"][data-value][data-disabled]::after {
+  content: '🔒';
+  margin-left: 0.25rem;
+  opacity: 0.6;
+}
+
+/* Transiciones suaves para todos los estados */
+.day-panel-editable [data-value],
+.day-panel-readonly [data-value] {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efecto de brillo en pestañas activas del día actual */
+.day-panel-editable [data-state="active"][data-value]::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  animation: shine 3s ease-in-out infinite;
+}
+
+@keyframes shine {
+  0% { left: -100%; }
+  50% { left: 100%; }
+  100% { left: 100%; }
+}
+
+/* Dark mode adjustments */
+.dark .day-panel-editable [data-state="active"][data-value] {
+  background: linear-gradient(135deg, var(--chart-1) 0%, var(--chart-2) 100%);
+  color: var(--primary-foreground);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.dark .day-panel-editable [data-state="inactive"][data-value] {
+  background: linear-gradient(135deg, var(--primary)/20 0%, var(--chart-1)/15 100%);
+  color: var(--primary);
+}
+
+.dark .day-panel-readonly [data-state="active"][data-value] {
+  background: linear-gradient(135deg, var(--muted) 0%, var(--muted-foreground)/30 100%);
+  color: var(--muted-foreground);
+}
+
+/* Estilos mejorados para botón de registro intuitivo */
+.register-button {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--primary)/8 0%, var(--chart-1)/8 100%);
+  border: 1px solid var(--primary)/15;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.register-button:hover {
+  background: linear-gradient(135deg, var(--primary)/12 0%, var(--chart-1)/12 100%);
+  border: 1px solid var(--primary)/25;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 0 0 1px var(--primary)/10;
+  transform: translateY(-1px);
+}
+
+.register-button:hover .register-arrow {
+  transform: translateX(2px);
+  opacity: 1;
+}
+
+.register-arrow {
+  transition: all 0.3s ease;
+  opacity: 0.7;
+}
+
+.register-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.register-button:hover::before {
+  left: 100%;
+}
+
+.register-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark mode para botón de registro */
+.dark .register-button {
+  background: linear-gradient(135deg, var(--primary)/15 0%, var(--chart-1)/15 100%);
+  border: 1px solid var(--primary)/20;
+}
+
+.dark .register-button:hover {
+  background: linear-gradient(135deg, var(--primary)/25 0%, var(--chart-1)/25 100%);
+  border: 1px solid var(--primary)/35;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), 0 0 0 1px var(--primary)/20;
+}
+
+/* Pulsación sutil para llamar la atención */
+@keyframes subtle-pulse {
+  0%, 100% { 
+    box-shadow: 0 0 0 0 var(--primary)/20;
+  }
+  50% { 
+    box-shadow: 0 0 0 4px var(--primary)/10;
+  }
+}
+
+.register-button {
+  animation: subtle-pulse 3s ease-in-out infinite;
+}
+
+.register-button:hover {
+  animation: none;
+}
